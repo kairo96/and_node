@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/order_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_meter"
+            android:textSize="@dimen/text_size_small2"
+            android:textColor="@color/text_color_green"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/order_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_favorite"
+            android:textSize="@dimen/text_size_small2"
+            android:textColor="@color/text_color_black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/order_recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_recent"
+            android:textSize="@dimen/text_size_small2"
+            android:textColor="@color/text_color_black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/list_type"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/spacing_small"
+            android:src="@drawable/ic_list2"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_below="@+id/top_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:dividerHeight="@dimen/spacing_small"/>
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:padding="@dimen/spacing_small"
+        android:background="@color/text_color_red"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_data"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/text_size_small2"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

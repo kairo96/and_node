@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:background="@color/bg_default"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/bestfood_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/bg_round"
+            android:gravity="start"
+            android:hint="@string/input_bestfood_name"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/spacing_large"
+            android:textSize="@dimen/text_size_small2" />
+
+        <EditText
+            android:id="@+id/bestfood_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/bg_round"
+            android:gravity="start"
+            android:hint="@string/input_bestfood_address"
+            android:maxLines="1"
+            android:padding="@dimen/spacing_large"
+            android:textSize="@dimen/text_size_small2" />
+
+        <EditText
+            android:id="@+id/bestfood_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/bg_round"
+            android:gravity="start"
+            android:hint="@string/input_bestfood_tel"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:maxLines="1"
+            android:padding="@dimen/spacing_large"
+            android:textSize="@dimen/text_size_small2" />
+
+        <LinearLayout
+            android:id="@+id/current_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_small"
+                android:text="@string/input_text_length"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/current_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/text_max_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_text_max_length"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/bestfood_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/bg_round"
+            android:fadeScrollbars="false"
+            android:gravity="start"
+            android:hint="@string/input_bestfood_description"
+            android:lines="9"
+            android:maxLength="500"
+            android:overScrollMode="always"
+            android:padding="@dimen/spacing_large"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/text_size_small2" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_small"
+                android:layout_weight="1"
+                android:background="@drawable/button_round"
+                android:text="@string/prev"
+                android:textSize="@dimen/text_size_small2" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_small"
+                android:layout_weight="1"
+                android:background="@drawable/button_round"
+                android:text="@string/next"
+                android:textSize="@dimen/text_size_small2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

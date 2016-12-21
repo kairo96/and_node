@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_index">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_large2"
+        android:layout_marginTop="80dp"
+        android:gravity="right"
+        android:text="@string/index_message"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/text_size_medium2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:gravity="center"
+        android:text="@string/delicious"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/text_size_medium2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/close"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="@string/network_not_working"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_round_red"
+        android:text="@string/submit"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+</RelativeLayout>

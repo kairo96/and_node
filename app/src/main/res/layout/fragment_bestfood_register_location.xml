@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/spacing_small">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/next" />
+
+    <TextView
+        android:id="@+id/bestfood_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_basic_black_transparent"
+        android:text="address"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/text_color_white"
+
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/next"
+        android:textSize="@dimen/text_size_small2"
+        android:textColor="@color/text_color_black"
+        android:background="@drawable/button_round" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_album_category">
+        <item>카메라</item>
+        <item>앨범</item>
+    </string-array>
+</resources>
