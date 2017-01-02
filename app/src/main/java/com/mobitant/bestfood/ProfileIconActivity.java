@@ -73,6 +73,7 @@ public class ProfileIconActivity extends AppCompatActivity implements View.OnCli
 
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(R.string.profile_setting);
         }
     }
 

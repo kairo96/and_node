@@ -45,10 +45,10 @@
 
                 <TextView
                     android:id="@+id/name"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:text="name"
                     android:textSize="@dimen/text_size_small2"
                     android:textColor="@color/text_color_black"
@@ -58,7 +58,7 @@
                     android:id="@+id/distance_meter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="km"
                     android:textSize="@dimen/text_size_small2"
                     android:textColor="@color/text_color_black" />
