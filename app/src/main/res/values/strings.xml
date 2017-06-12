@@ -10,7 +10,7 @@
     <!-- 권한 화면 -->
     <string name="permission_checking">권한 확인중...</string>
     <string name="permission_setting_title">권한 설정</string>
-    <string name="permission_setting_message">앱을 실행하기 위해서는 권한 설정을 해야합니다!</string>
+    <string name="permission_setting_message">앱을 실행하기 위해서는 권한 설정을 해야 합니다!</string>
     <string name="permission_setting_restart">권한을 설정하고 다시 실행해주세요!</string>
 
     <!-- 시작 화면 -->
@@ -27,7 +27,6 @@
     <string name="nav_register">맛집등록</string>
     <string name="nav_profile">프로필설정</string>
 
-
     <!-- 공통 -->
     <string name="skip_string">...</string>
 
@@ -38,6 +37,7 @@
     <string name="next">다음</string>
     <string name="complete">완료</string>
 
+    <!-- 프로필 -->
     <string name="profile_setting">프로필 설정</string>
 
     <string name="profile_name">이름</string>

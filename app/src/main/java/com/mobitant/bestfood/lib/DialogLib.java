@@ -30,7 +30,7 @@ public class DialogLib {
      * @param context 컨텍스트 객체
      * @param handler 핸들러 객체
      * @param memberSeq 사용자 일련번호
-     * @param infoSeq 맛집 정보 일려번호
+     * @param infoSeq 맛집 정보 일련번호
      */
     public void showKeepInsertDialog(Context context, final Handler handler,
                                      final int memberSeq, final int infoSeq) {
@@ -57,7 +57,7 @@ public class DialogLib {
      * @param context 컨텍스트 객체
      * @param handler 핸들러 객체
      * @param memberSeq 사용자 일련번호
-     * @param infoSeq 맛집 정보 일려번호
+     * @param infoSeq 맛집 정보 일련번호
      */
     public void showKeepDeleteDialog(Context context, final Handler handler,
                                      final int memberSeq, final int infoSeq) {

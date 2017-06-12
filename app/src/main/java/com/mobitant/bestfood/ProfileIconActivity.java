@@ -170,8 +170,7 @@ public class ProfileIconActivity extends AppCompatActivity implements View.OnCli
      */
     private void getImageFromCamera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                Uri.fromFile(profileIconFile));
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(profileIconFile));
         startActivityForResult(intent, PICK_FROM_CAMERA);
     }
 

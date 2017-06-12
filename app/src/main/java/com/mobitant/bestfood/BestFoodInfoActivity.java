@@ -239,7 +239,7 @@ public class BestFoodInfoActivity extends AppCompatActivity
         setting.setZoomControlsEnabled(true);
         setting.setMapToolbarEnabled(true);
 
-        final MarkerOptions marker = new MarkerOptions();
+        MarkerOptions marker = new MarkerOptions();
         marker.position(new LatLng(item.latitude, item.longitude));
         marker.draggable(false);
         map.addMarker(marker);
