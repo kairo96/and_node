@@ -60,12 +60,12 @@ router.get('/info/:seq', function(req, res, next) {
   var member_seq = req.query.member_seq;
   
   var sql = 
-    "SELECT a.*, " +
+    "select a.*, " +
     "  '0' as user_distance_meter, " +
-    "  IF( EXISTS(select * from bestfood_keep where member_seq = ? and a.seq = info_seq), 'true', 'false') as is_keep, " +
+    "  if( exists(select * from bestfood_keep where member_seq = ? and a.seq = info_seq), 'true', 'false') as is_keep, " +
     "  (select filename from bestfood_info_image where info_seq = a.seq order by seq limit 1) as image_filename " +            
-    "FROM bestfood_info as a " +
-    "WHERE seq = ? ; ";
+    "from bestfood_info as a " +
+    "where seq = ? ; ";
   console.log("sql : " + sql);
     
   db.get().query(sql, [member_seq, seq], function (err, rows) {
@@ -76,7 +76,7 @@ router.get('/info/:seq', function(req, res, next) {
   });      
 });
 
-//list
+//food/list
 router.get('/list', function(req, res, next) {
   var member_seq = req.query.member_seq;
   var user_latitude = req.query.user_latitude || DEFAULT_USER_LATITUDE;
@@ -100,13 +100,13 @@ router.get('/list', function(req, res, next) {
 
   
   var sql = 
-    "SELECT a.*, " +
+    "select a.*, " +
     "  (( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) )  " +
     "  + sin( radians(?) ) * sin( radians( latitude ) ) ) ) * 1000) AS user_distance_meter, " +
-    "  IF( EXISTS(select * from bestfood_keep where member_seq = ? and info_seq = a.seq), 'true', 'false') as is_keep, " +
+    "  if( exists(select * from bestfood_keep where member_seq = ? and info_seq = a.seq), 'true', 'false') as is_keep, " +
     "  (select filename from bestfood_info_image where info_seq = a.seq) as image_filename " +
-    "FROM bestfood_info as a " +
-    "ORDER BY  " + order_add + " " +
+    "from bestfood_info as a " +
+    "order by  " + order_add + " " +
     "limit ? , ? ; ";
   console.log("sql : " + sql);
   console.log("order_add : " + order_add);
@@ -121,7 +121,7 @@ router.get('/list', function(req, res, next) {
   });
 });
 
-//map/list
+//food/map/list
 router.get('/map/list', function(req, res, next) {
   var member_seq = req.query.member_seq;
   var latitude = req.query.latitude;
@@ -135,16 +135,16 @@ router.get('/map/list', function(req, res, next) {
   }
 
   var sql = 
-    "SELECT a.*, " + 
+    "select a.*, " + 
     "  (( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) " + 
     "  + sin( radians(?) ) * sin( radians( latitude ) ) ) ) * 1000) AS distance_meter," + 
     "  (( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) " + 
     "  + sin( radians(?) ) * sin( radians( latitude ) ) ) ) * 1000) AS user_distance_meter," + 
     "  IF(EXISTS (select * from bestfood_keep where member_seq = ? and a.seq = info_seq), 'true', 'false') as is_keep," + 
     "  (select filename from bestfood_info_image where info_seq = a.seq) as image_filename " + 
-    "FROM bestfood_info as a " + 
-    "HAVING distance_meter <= ? " + 
-    "ORDER BY user_distance_meter ";
+    "from bestfood_info as a " + 
+    "having distance_meter <= ? " + 
+    "order by user_distance_meter ";
   console.log("sql : " + sql);  
     
   var params = [latitude, longitude, latitude, user_latitude, user_longitude, user_latitude, member_seq, distance];

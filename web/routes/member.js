@@ -16,7 +16,7 @@ router.get('/:phone', function(req, res, next) {
       console.log("rows : " + JSON.stringify(rows));
       console.log("row.length : " + rows.length);
       if (rows.length > 0) {
-        res.json(rows[0]);
+        res.status(200).json(rows[0]);
       } else {
         res.sendStatus(400);
       }
@@ -45,7 +45,7 @@ router.post('/phone', function(req, res) {
     db.get().query(sql_insert, phone, function (err, result) {
       console.log(err);
       if (err) return res.sendStatus(400);
-      res.status(200).send(''+result.insertId);
+      res.status(200).send('' + result.insertId);
     });
   });
 });
@@ -78,7 +78,7 @@ router.post('/info', function(req, res) {
         db.get().query(sql_select, phone, function (err, rows) {
           if (err) return res.sendStatus(400);
 
-          res.status(200).send(''+rows[0].seq);
+          res.status(200).send('' + rows[0].seq);
         });
       });
     } else {
@@ -87,7 +87,7 @@ router.post('/info', function(req, res) {
       db.get().query(sql_insert, [phone, name, sextype, birthday], function (err, result) {
         if (err) return res.sendStatus(400);
 
-        res.status(200).send(result.insertId);
+        res.status(200).send('' + result.insertId);
       });
     }
   });
