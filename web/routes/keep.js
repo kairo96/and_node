@@ -33,8 +33,8 @@ router.get('/list', function(req, res, next) {
   }); 
 });
 
-//keep/insert/:member_seq/:info_seq
-router.post('/insert/:member_seq/:info_seq', function(req, res, next) {
+//keep/:member_seq/:info_seq
+router.post('/:member_seq/:info_seq', function(req, res, next) {
     var member_seq = req.params.member_seq;
     var info_seq = req.params.info_seq;
     
@@ -63,8 +63,8 @@ router.post('/insert/:member_seq/:info_seq', function(req, res, next) {
     }); 
 });
 
-//keep/delete/:member_seq/:info_seq
-router.delete('/delete/:member_seq/:info_seq', function(req, res, next) {
+//keep/:member_seq/:info_seq
+router.delete('/:member_seq/:info_seq', function(req, res, next) {
     var member_seq = req.params.member_seq;
     var info_seq = req.params.info_seq;
     
