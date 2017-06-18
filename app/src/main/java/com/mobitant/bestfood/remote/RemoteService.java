@@ -78,10 +78,10 @@ public interface RemoteService {
 
 
     //즐겨찾기
-    @POST("/keep/insert/{member_seq}/{info_seq}")
+    @POST("/keep/{member_seq}/{info_seq}")
     Call<String> insertKeep(@Path("member_seq") int memberSeq, @Path("info_seq") int infoSeq);
 
-    @DELETE("/keep/delete/{member_seq}/{info_seq}")
+    @DELETE("/keep/{member_seq}/{info_seq}")
     Call<String> deleteKeep(@Path("member_seq") int memberSeq, @Path("info_seq") int infoSeq);
 
     @GET("/keep/list")
