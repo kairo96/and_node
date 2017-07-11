@@ -1,8 +1,7 @@
 # and_node
 오픈소스를 활용한 안드로이드 서비스 개발(with Node.js)
 
-
-
+**bestfood_info 테이블 생성문**
 CREATE TABLE IF NOT EXISTS bestfood_info (  
   `seq` int(11) NOT NULL AUTO_INCREMENT,  
   `member_seq` int(11) NOT NULL,  
