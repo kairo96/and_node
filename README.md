@@ -1,10 +1,10 @@
 # and_node
 오픈소스를 활용한 안드로이드 서비스 개발(with Node.js)
 
-##MariaDB 테이블 생성문
+## MariaDB 테이블 생성문
 
 
-**bestfood_info 테이블 생성문** 
+**bestfood_info 테이블 생성문**  
 CREATE TABLE IF NOT EXISTS `bestfood_info` (  
   `seq` int(11) NOT NULL AUTO_INCREMENT,  
   `member_seq` int(11) NOT NULL,  
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `bestfood_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  
 
 
-**bestfood_info_image 테이블 생성문**  
+**bestfood_info_image 테이블 생성문**   
 CREATE TABLE IF NOT EXISTS `bestfood_info_image` (  
   `seq` int(11) NOT NULL AUTO_INCREMENT,  
   `info_seq` int(11) NOT NULL,  
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `bestfood_info_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-**bestfood_keep 테이블 생성문**  
+**bestfood_keep 테이블 생성문**   
 CREATE TABLE IF NOT EXISTS `bestfood_keep` (  
   `seq` int(11) NOT NULL AUTO_INCREMENT,  
   `member_seq` int(11) NOT NULL,  
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `bestfood_keep` (
   PRIMARY KEY (`seq`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;  
 
-
-**bestfood_member 테이블 생성문**  
+ 
+**bestfood_member 테이블 생성문**   
 CREATE TABLE IF NOT EXISTS `bestfood_member` (  
   `seq` int(11) NOT NULL AUTO_INCREMENT,  
   `phone` varchar(30) NOT NULL,  
