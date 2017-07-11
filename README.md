@@ -3,9 +3,9 @@
 
 
 
-CREATE TABLE IF NOT EXISTS bestfood_info (
-  `seq` int(11) NOT NULL AUTO_INCREMENT,
-  `member_seq` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS bestfood_info (  
+  `seq` int(11) NOT NULL AUTO_INCREMENT,  
+  `member_seq` int(11) NOT NULL,  
   `name` varchar(20) NOT NULL,
   `tel` varchar(20) NOT NULL,
   `address` varchar(50) NOT NULL,
