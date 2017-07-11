@@ -10,9 +10,9 @@ router.get('/:phone', function(req, res, next) {
   var sql = "select * " +
             "from bestfood_member " + 
             "where phone = ? limit 1;";  
-  console.log("sql : " + sql);  
-    
-  db.get().query(sql, phone, function (err, rows) {
+  console.log("sql : " + sql);    
+	
+	db.get().query(sql, phone, function (err, rows) {
       console.log("rows : " + JSON.stringify(rows));
       console.log("row.length : " + rows.length);
       if (rows.length > 0) {
